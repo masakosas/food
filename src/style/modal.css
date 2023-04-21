@@ -1,0 +1,190 @@
+
+
+.foodprice {
+    font-size: 18px;
+    color: #666;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    height: 98%;
+    background-color: whitesmoke;
+    border-radius: 0.8em;
+    overflow-y: auto;
+   
+}
+
+.modalsection {
+    padding: 1rem;
+    background-color: white;
+}
+
+.modallogo {
+    width: 101%;
+    border-radius: 10px 10px 0px 0px;
+    height: 259px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.choicecontent:focus {
+    background-color: #ff0000;
+}
+
+.modaltitle {
+    font-size: medium;
+    font-weight: 600;
+    line-height: 20px;
+    height: 30px;
+}
+
+.modifybox{
+    margin-bottom: 20px;
+}
+.modaldescription {
+    font-size: medium;
+    color: grey;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.cancelbox {
+    background: #fff;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(1, 3, 38, 0.16);
+    border-radius: 4px;
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    border: 1px solid white;
+    width: 45px;
+    height: 40px;
+}
+
+.cancelimg {
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    bottom: 14%;
+    left: 7px;
+    width: 65%;
+}
+
+.pricebox {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: medium;
+    font-weight: 600;
+    line-height: 20px;
+    width: 95%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d0021b;
+    background-color: #d0021b;
+    border-radius: 1em;
+    align-items: center;
+    color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: large;
+}
+
+.choice-price {
+    color: grey;
+}
+
+.modalfoodprice {
+    text-align: right;
+    margin-left: 10px;
+}
+
+
+.pricecontainer {
+    position: fixed;
+    z-index: auto;
+    display: flex;
+    width: 100%;
+    border: 1px solid white;
+    background-color: white;
+    bottom: 0px;
+    align-content: stretch;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    height: 9%;
+}
+
+.modifytitle {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: medium;
+    font-weight: 600;
+    padding-left: 13px;
+}
+
+
+.choice-title {
+
+    width: 100%;
+    padding-right: 7px;
+    font-size: 85%;
+
+}
+
+.choicebox {
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 0.4em;
+    background-color: white;
+
+}
+
+.choicecontainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.choice-radio {
+    display: none;
+}
+
+.choicecontent::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 13px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: transparent;
+    vertical-align: middle;
+}

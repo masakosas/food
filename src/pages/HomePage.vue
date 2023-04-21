@@ -1,9 +1,12 @@
-<script setup>
+
+<script lang setup>
+
 import { reactive, ref, watch } from 'vue';
 import axios from 'axios';
 import { serializeRestaurantsMainList } from '@/serializers/RestaurantMain';
 import VerticalRestaurants from '@/components/VerticalRestaurants.vue';
 import HorizontalRestaurants from '@/components/HorizontalRestaurants.vue';
+
 
 const verticalRestaurants = reactive([]);
 const isVerticalRestaurantsLoading = ref(false);
@@ -24,7 +27,7 @@ function getVerticalRestaurants() {
   ).then((response) => {
     console.log(response);
     verticalRestaurants.push(...serializeRestaurantsMainList(response.data.result));
-    if(response.data.result.length === 18) isVerticalRestaurantsLoading.value = false;
+    if (response.data.result.length === 18) isVerticalRestaurantsLoading.value = false;
   });
 }
 
@@ -84,18 +87,9 @@ fetchNewRestaurants();
 
 <template>
   <div class="px-2">
-    <HorizontalRestaurants
-      title="Новые заведения"
-      :restaurants="newRestaurants"
-    />
-    <HorizontalRestaurants
-      title="Популярные заведения"
-      :restaurants="popularRestaurants"
-    />
-    <VerticalRestaurants
-      :restaurants="verticalRestaurants"
-      :is-loading="isVerticalRestaurantsLoading"
-      @request-restaurants="verticalRestaurantsPage += 1"
-    />
+    <HorizontalRestaurants title="Новые заведения" :restaurants="newRestaurants" />
+    <HorizontalRestaurants title="Популярные заведения" :restaurants="popularRestaurants" />
+    <VerticalRestaurants :restaurants="verticalRestaurants" :is-loading="isVerticalRestaurantsLoading"
+      @request-restaurants="verticalRestaurantsPage += 1" />
   </div>
 </template>
